@@ -70,7 +70,7 @@ Now, we are goint to describe every function and its parameters.
 
 - **`set_origin_point`**:Sets the origin point (0,0,0) to the specified voxel in the data matrix. The origin point corresponds to the anatomical view and depends on the affine matrix. The data matrix refers to the image itself and its voxels coordinates does not depends on the affine matrix. For example, if you have a nifti image with a shape of 121x145x121 and you want the origin point located in the center of the volume, you would set the "voxel" parameter as [60, 72, 60].
     - `save_partial`: (Boolean) If "True", the output image in this step will be saved.
-    - `point`: (Numeric array)
+    - `voxel`: (Numeric array)
 
     Example:
     ```yaml
