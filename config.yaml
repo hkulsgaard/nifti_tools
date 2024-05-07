@@ -1,0 +1,13 @@
+- rotate:
+    save_partial: True
+    degrees: [90,0,90]
+    
+- reorder_to_canonical:
+    save_partial: True
+
+- change_pixel_dimension:
+    save_partial: True
+    pixdim: [1,0.75,0.75]
+    
+- reorder_to_canonical:
+    save_partial: True
