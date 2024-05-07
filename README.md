@@ -148,7 +148,7 @@ Now, we are goint to describe every function with its parameters.
 
 
 ## How to run
-In order to run Nifti tools you have to install all the requirements described in [Installation section](Installation) and then open a terminal located in the directory where this code is stored and type:
+In order to run Nifti tools you have to install all the requirements described in [Installation section](#Installation) and then open a terminal located in the directory where this code is stored and type:
 
 ```
 python nifti_tools.py
