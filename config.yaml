@@ -5,7 +5,7 @@
 - reorder_to_canonical:
     save_partial: True
 
-- change_pixel_dimension:
+- set_pixel_dimension:
     save_partial: True
     pixdim: [1,0.75,0.75]
     
