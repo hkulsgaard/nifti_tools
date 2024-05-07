@@ -27,7 +27,7 @@ In order to apply the provided functions, you have to set a `config file` before
 
 ### Functions and parameters
 
-This repository provides a set of functions ready to be applied to nifti images. Every function starts with a dash (-) followed by a blank space, the function name and a colon punctuation(:). Then, each parameter should be listed with a tab space, the parameter's name, colon punctuation(:), a blank space and, finally, the value. Note that code identation is fundamental here.
+This repository provides a set of functions ready to be applied to nifti images. Every function starts with a dash `"-"` followed by a blank space, the function name and a colon punctuation `":"`. Then, each parameter should be listed with a tab space, the parameter's name, colon punctuation `":"`, a blank space and, finally, the value. Note that code identation is fundamental here.
 
 Example:
 ```yaml
@@ -43,9 +43,9 @@ Example:
     parameter_5: value
     parameter_6: value
 ```
-In this case, the `function1` will take as input the selected nifti images. Its outputs will be the input of the `function2`, and so on. The funcions will be executed serially for each input image selected.
+In this case, the `function1` will take as input the selected nifti images. Its outputs will be the inputs of the `function2`. Then, the `function2` outputs will be the inputs of the `function 3` and its outputs will be the final processed images. In summary, the functions will be executed serially for the selected input images.
 
-Now, we are goint to describe every function with its parameters.
+Now, we are goint to describe every function and its parameters.
 
 - **`reorder_to_canonical`**: Sets the world and the voxel orientation to Right Anterior Superior (RAS), also called Canonical order.
 
