@@ -55,8 +55,8 @@ def save_nifti(nii, path, suffix_acum, verbose=True):
 def load_functions(config):
     mdict={ 'reorder_to_canonical':nim.ReorderToCanonical,
             'rotate':nim.Rotate,
-            'set_origin_point':nim.setOriginPoint,
-            'set_pixel_dimension':nim.setPixDim,
+            'set_origin_point':nim.SetOriginPoint,
+            'set_pixel_dimension':nim.SetPixDim,
             'affine_to_diagonal':nim.AffineToDiagonal,
             'affine_to_identity':nim.AffineToIdentity,
             'reslice':nim.Reslice}
