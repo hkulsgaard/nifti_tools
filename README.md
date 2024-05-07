@@ -2,7 +2,7 @@
 
 This repository contains a Pytorch implementation of functions for NIFTI image processing. This functions allows to change some image characteristic as dimension (shape), spacing and the affine matrix, do data matrix operations as translation, rotation and reslacing, and also fix data order to match the canonical view. 
 
-This tools were mainly developed for fixing common problems in image preprocessing and more complex issues related to missing crucial data when transforming from DICOM to NIFTI format. Keep in mind that some functions can change the image data producing data loss. For that reason, the input images are always kept untouch, while results are stored in new files.
+This tools were mainly developed for fixing common problems in image preprocessing. For example, issues related to missing crucial data when transforming from DICOM to NIFTI format. In this way, you can combine this tools to create individual processing pipelines to fix different kind of issues. Also, this pipelines, called config files, are easy to set and apply.
 
 ## Content
 1. [Installation](#Installation)
@@ -139,12 +139,16 @@ Now, we are goint to describe every function with its parameters.
     save_partial: False
 ```
 
-### Tips for the prossesing pipeline configuration
-- Create different config files for every processing pipeling. For example, if you need to make different modifications for the dataset D1 and D2, create two config files called "D1_config.yaml" and "D2_config.yaml".
+### Notes
+- You can create different config files for every processing pipeling. For example, if you need to make different modifications depending on the dataset, you can set individual config files for every dataset.
 
-- Create a copy of the config file and store it in the same directory where you have the output images.
+- After processing images, store the config file in the same directory of the input/output images for future usage and reference.
 
-- The parameter `save_partial` is very useful when experimenting. Set it "True" to keep a close watch in every prossesing step of the pipeling. In this way, if there is some error in the final image, you can check which function is causing the problem.
+- The parameter `save_partial` is very useful when experimenting. Set it `True` to keep a close watch for every function. In this way, if there is some error in the final image, you can check which function is causing the problem.
+
+- All processed images are stored in the compressed lossless `.gz` format, saving time and storage space.
+
+- It is possible to develop new functions. You just need to add a new class in the `nifti_functions.py` file that inherits from `NiftiFunction` and add the function name in the dictiony of functions inside the `manager.py` file.
 
 
 ## How to run
